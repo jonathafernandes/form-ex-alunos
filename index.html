@@ -1,97 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-    <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
 
-  <body>
+<body>
+
+  <div class="campo">
+    <h1 id="titulo">Formulário de Inscrição de Ex-alunos</h1>
+    <br>
+
+  </div>
+
+  <form>
+    <fieldset class="grupo">
+      <!-- Criar uma caixa nos dois dados de entrada -->
+      <div class="campo">
+        <label for="nome"><span class="numero-list">1.</span>Nome</label>
+
+        <input type="text" name="nome" id="nome" required="" placeholder="Primeiro nome">
+        <input type="text" name="sobrenome" id="sobrenome" required="" placeholder="Último nome">
+      </div>
+    </fieldset>
 
     <div class="campo">
-      <h1 id="titulo">Cadastro de DEVs</h1>
-      <p id="subtitulo">Complete suas informações.</p>
-      <br>
-
+      <label for="email"><span class="numero-list">2.</span>E-mail</label>
+      <input type="email" name="email" id="email" required="">
     </div>
 
-    <form>
-      <fieldset class="grupo">
-        <!-- Criar uma caixa nos dois dados de entrada -->
-        <div class="campo">
-          <label for="nome"><strong>Nome</strong></label>
+    <div class="campo">
+      <label for="email"><span class="numero-list">3.</span>Número de telefone</label>
+      <input type="number" name="number" id="email" required="">
+    </div>
 
-          <input type="text" name="nome" id="nome" required="">
-        </div>
+    <div class="campo">
+      <label for="email"><span class="numero-list">4.</span>Qual seu endereço?</label>
+      <input type="text" name="endereco" id="endereco" required="" placeholder="Endereço">
+    </div>
 
-        <div class="campo">
-          <label for="sobrenome"><strong>Sobrenome</strong></label>
-          <input type="text" name="sobrenome" id="sobrenome" required="">
-        </div>
-      </fieldset>
-
+    <div class="endereco">
       <div class="campo">
-        <label for="email"><strong>E-mail</strong></label>
-        <input type="email" name="email" id="email" required="">
+        <input type="text" name="codigo-postal" id="codigo-postal" required="" placeholder="Código postal">
       </div>
 
       <div class="campo">
-        <label><strong>De qual lado da aplicação você desenvolve?</strong></label>
-        <label for="">
-          <input type="radio" name="devweb" value="frontend" checked="">Front-End
-        </label>
-        <label>
-          <input type="radio" name="devweb" value="backend">Back-End
-        </label>
-        <label>
-          <input type="radio" name="devweb" value="fullstack">Fullstack
-        </label>
-      </div>
-
-      <div class="campo">
-        <label for="senioridade"><strong>Senioridade</strong></label>
-        <select id="senioridade">
-          <option selected="" disabled="" value="">Selecione</option>
-          <option>Junior</option>
-          <option>Pleno</option>
-          <option>Senior</option>
+        <select id="pais">
+          <option selected="" disabled="" value="">País</option>
+          <option>Brasil</option>
+          <option>Chile</option>
+          <option>Portugal</option>
         </select>
       </div>
+    </div>
 
-      <fieldset class="grupo">
-        <div id="check">
-          <label for=""><strong>Selecione as tecnologias que utiliza:</strong></label><br><br>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="HTML">
-          <label for="tecnologia">HTML</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="CSS">
-          <label for="tecnologia">CSS</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="JavaScript">
-          <label for="tecnologia">JavaScript</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="PHP">
-          <label for="tecnologia">PHP</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="C#">
-          <label for="tecnologia">C#</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="Python">
-          <label for="tecnologia">Python</label>
-          <input type="checkbox" id="tecnologia" name="tecnologia" value="Java">
-          <label for="tecnologia">Java</label>
-        </div>
-      </fieldset>
+    <div class="campo">
+      <label for="email"><span class="numero-list">5.</span>Ocupação</label>
+      <input type="text" name="text" id="ocupacao" required="">
+    </div>
 
-      <div class="campo">
-        <label><strong>Conte um pouco da sua experiência.</strong></label>
-        <textarea style="width: 26em" name="experiencia" id="experiencia" rows="6"></textarea>
-      </div>
+    <div class="campo">
+      <label for="email"><span class="numero-list">6.</span>Período de estudo</label>
+      <input type="text" name="text" id="periodo-de-estudo" required="">
+    </div>
 
-      <button class="botao" type="submit">Concluído</button>
-    </form>
+    <div class="campo">
+      <label for="message"><span class="numero-list
+      ">7.</span>Comentários e sugestões adicionais</label>
+      <textarea name="message" id="message" cols="95" rows="10"
+        required></textarea>
+    </div>
+    <button id="botao">Enviar</button>
+  </form>
 
-
-  </body>
+</body>
 
 </html>
