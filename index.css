@@ -6,9 +6,10 @@
 
 body {
   background: linear-gradient(68.15deg, #2457c7 0.62%, #3b9e99 95.61%);
+  background-repeat: no-repeat;
   color: #fff;
   font-family: 'Space Mono', monospace;
-  
+
   margin: 2% 0 2% 0;
   display: grid;
   place-items: center;
@@ -16,6 +17,12 @@ body {
 
 .numero-list {
   color: #5cf1f1;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+  padding: 3%;
 }
 
 fieldset {
@@ -31,10 +38,13 @@ fieldset {
   display: block;
 }
 
-.campo input, textarea {
+.campo input,
+textarea {
+  padding: 1%;
+  width: 97%;
+
   font-family: 'Space Mono', monospace;
 
-  padding: 1%;
   opacity: 0.5;
   border: 1px solid #5cf1f1;
   outline: none;
@@ -59,14 +69,20 @@ option {
 
 #titulo {
   font-size: 20px;
+
+  text-align: center;
 }
 
-#nome, #sobrenome {
-  width: 400px;
+#nome,
+#sobrenome {
+  width: 47.7%;
 }
 
-#email, #endereco, #ocupacao, #periodo-de-estudo {
-  width: 812px;
+#email,
+#endereco,
+#ocupacao,
+#periodo-de-estudo {
+  width: 97%;
 }
 
 .endereco {
@@ -84,7 +100,7 @@ option {
   background-color: #5cf1f1;
   font-family: 'Space Mono', monospace;
   font-weight: bold;
-  
+
   border: none;
   border-radius: 5px;
 
@@ -98,4 +114,15 @@ option {
 
 #botao:hover {
   opacity: 0.8;
+}
+
+@media (max-width: 470px) {
+  #titulo {
+    font-size: 16px;
+  }
+
+  select {
+    width: 165px;
+    padding: 2%;
+  }
 }
