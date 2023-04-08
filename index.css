@@ -15,8 +15,23 @@ body {
   place-items: center;
 }
 
-.numero-list {
+.list-number {
   color: #5cf1f1;
+}
+
+.field a {
+  visibility: hidden;
+
+  font-size: 13px;
+}
+
+.field.error input {
+  border-color: #ff8b7e;
+}
+
+.field.error a {
+  color: #ff8b7e;
+  visibility: visible;
 }
 
 .container {
@@ -29,16 +44,16 @@ fieldset {
   border: 0;
 }
 
-.campo {
-  margin-bottom: 1em;
-}
-
-.campo label {
-  margin-bottom: 0.2em;
+.field label {
+  margin: 0.4em 0 0.2em 0;
   display: block;
 }
 
-.campo input,
+.fiel input, #postal-code, #country, #period-study, #occupation, textarea {
+  margin-bottom: 2em;
+}
+
+.field input,
 textarea {
   padding: 1%;
   width: 97%;
@@ -49,6 +64,10 @@ textarea {
   border: 1px solid #5cf1f1;
   outline: none;
   border-radius: 5px;
+}
+
+.field #address {
+  margin-bottom: 1em;
 }
 
 select {
@@ -67,36 +86,37 @@ option {
   font-family: 'Space Mono', monospace;
 }
 
-#titulo {
+#title {
   font-size: 20px;
 
   text-align: center;
 }
 
-#nome,
-#sobrenome {
+#name,
+#last-name {
   width: 47.7%;
+  margin: 0;
 }
 
 #email,
-#endereco,
-#ocupacao,
-#periodo-de-estudo {
+#address,
+#occupation,
+#period-study {
   width: 97%;
 }
 
-.endereco {
+.address {
   display: flex;
   gap: 1%;
   align-items: center;
 }
 
-.endereco #codigo-postal {
+.address #postal-code {
   padding: 3%;
   width: 123px;
 }
 
-#botao {
+#button {
   background-color: #5cf1f1;
   font-family: 'Space Mono', monospace;
   font-weight: bold;
@@ -112,12 +132,12 @@ option {
   transition: 300ms;
 }
 
-#botao:hover {
+#button:hover {
   opacity: 0.8;
 }
 
 @media (max-width: 470px) {
-  #titulo {
+  #title {
     font-size: 16px;
   }
 
